@@ -19,4 +19,15 @@ public class CalcerTest {
         double expected = 1374.77;
         assertEquals(expected, actual, 0.01);
     }
+    @Test
+    void calcAreaNormal2Test(){
+        double aSide = 100;
+        double bSide = 105;
+        double cSide = 110;
+        double dSide = 115;
+        calcer.setSides(aSide, bSide, cSide, dSide);
+        double actual = calcer.calcArea();
+        double expected = 11524.97;
+        assertEquals(expected, actual, 0.01);
+    }
 }
