@@ -16,6 +16,9 @@ public class Calcer {
         dSide = Input.input("D oldal");
     }
     public double calcArea(){
+        if(!valuesIsOk()){
+            return -1;
+        }
         double halfPerimeter = (this.aSide+this.bSide+this.cSide+this.dSide)/2;
         double area = Math.sqrt(
             (halfPerimeter-aSide)*
@@ -24,5 +27,12 @@ public class Calcer {
             (halfPerimeter-dSide)
         );
         return area;
+    }
+    public boolean valuesIsOk(){
+        if(this.aSide <= 0 || this.bSide <= 0 || this.cSide <= 0 || this.dSide <= 0){
+            return false;
+        }else{
+            return true;
+        }
     }
 }

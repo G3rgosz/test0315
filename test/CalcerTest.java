@@ -30,4 +30,26 @@ public class CalcerTest {
         double expected = 11524.97;
         assertEquals(expected, actual, 0.01);
     }
+    @Test
+    void calcAreaMin1Test(){
+        double aSide = 1;
+        double bSide = 1;
+        double cSide = 1;
+        double dSide = 1;
+        calcer.setSides(aSide, bSide, cSide, dSide);
+        double actual = calcer.calcArea();
+        double expected = 1.0;
+        assertEquals(expected, actual);
+    }
+    @Test
+    void calcAreaNegativeTest(){
+        double aSide = 30;
+        double bSide = 35;
+        double cSide = 40;
+        double dSide = -5;
+        calcer.setSides(aSide, bSide, cSide, dSide);
+        double actual = calcer.calcArea();
+        double expected = -1;
+        assertEquals(expected, actual);
+    }
 }
